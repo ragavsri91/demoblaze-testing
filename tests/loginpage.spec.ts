@@ -17,5 +17,7 @@ test.describe('Demoblaze login', () => {
     const userLabel = page.locator('#nameofuser')
     await expect(userLabel).toBeVisible()
     await expect(userLabel).toHaveText(/Ragavnomad|Welcome/i)
+    // After login succeeds
+await argosScreenshot(page, 'homepage-after-login')
   })
 })

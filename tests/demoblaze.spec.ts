@@ -1,3 +1,4 @@
+import { argosScreenshot } from '@argos-ci/playwright'
 import { test, expect } from '@playwright/test';
 import { HomePage } from './page-objects/home-page';
 import { LoginPage } from './page-objects/login-page';
@@ -31,6 +32,9 @@ test.describe('login_with_valid_credentials', () => {
     await homePage.openLoginModal();
     await loginPage.login('Ragavnomad', 'Mercury@123');
     await loginPage.expectLoggedIn('Ragavnomad');
+
+    // After login succeeds
+await argosScreenshot(page, 'Login successful-homepage')
   });
 });
 
