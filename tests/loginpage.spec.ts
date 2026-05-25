@@ -1,3 +1,4 @@
+import { argosScreenshot } from '@argos-ci/playwright'
 import { test, expect } from '@playwright/test'
 
 test.describe('Demoblaze login', () => {
